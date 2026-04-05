@@ -251,6 +251,273 @@ function AnnouncementStrip() {
   );
 }
 
+// Election-themed hero section for birthday candidate Samir
+function ElectionHeroSection() {
+  const bgEmojis = [
+    {
+      id: "b1",
+      emoji: "🎈",
+      style: { top: "8%", left: "5%" },
+      cls: "animate-bounce-custom",
+    },
+    {
+      id: "f1",
+      emoji: "🎏",
+      style: { top: "15%", right: "6%" },
+      cls: "animate-wiggle",
+    },
+    {
+      id: "if1",
+      emoji: "🎌",
+      style: { top: "30%", left: "2%" },
+      cls: "animate-spin-custom",
+    },
+    {
+      id: "v1",
+      emoji: "🗳️",
+      style: { top: "50%", right: "3%" },
+      cls: "animate-bounce-custom",
+    },
+    {
+      id: "c1",
+      emoji: "🎊",
+      style: { top: "65%", left: "4%" },
+      cls: "animate-wiggle",
+    },
+    {
+      id: "p1",
+      emoji: "🎉",
+      style: { top: "75%", right: "7%" },
+      cls: "animate-spin-custom",
+    },
+    {
+      id: "b2",
+      emoji: "🎈",
+      style: { top: "20%", left: "12%" },
+      cls: "animate-card-float",
+    },
+    {
+      id: "f2",
+      emoji: "🎏",
+      style: { top: "55%", right: "12%" },
+      cls: "animate-card-float",
+    },
+    {
+      id: "v2",
+      emoji: "🗳️",
+      style: { top: "85%", left: "8%" },
+      cls: "animate-bounce-custom",
+    },
+    {
+      id: "c2",
+      emoji: "🎊",
+      style: { top: "40%", right: "15%" },
+      cls: "animate-wiggle",
+    },
+  ];
+
+  return (
+    <section
+      className="relative w-full py-16 px-4 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(160deg, #7b1c00 0%, #0a0a2b 50%, #003300 100%)",
+        borderBottom: "6px solid #ff6b00",
+      }}
+      data-ocid="election_hero.section"
+    >
+      {/* Scattered background political emojis */}
+      {bgEmojis.map((item) => (
+        <span
+          key={item.id}
+          className={`absolute text-3xl select-none pointer-events-none ${item.cls}`}
+          style={item.style}
+        >
+          {item.emoji}
+        </span>
+      ))}
+
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-6">
+        {/* Main headline */}
+        <h1
+          className="font-bangers text-center text-6xl md:text-8xl leading-none"
+          style={{
+            color: "#ffe600",
+            WebkitTextStroke: "3px #0a0a0a",
+            textShadow: "0 0 30px #ff6b00, 0 0 60px #ff2bbf, 4px 4px 0 #0a0a0a",
+            transform: "rotate(-2deg)",
+            letterSpacing: "0.05em",
+          }}
+          data-ocid="election_hero.primary_button"
+        >
+          VOTE FOR SAMIR 🗳️🔥
+        </h1>
+
+        {/* Subtitle */}
+        <p
+          className="font-bangers text-center text-2xl md:text-4xl animate-subtitle-bounce"
+          style={{
+            color: "#ff2bbf",
+            WebkitTextStroke: "1.5px #0a0a0a",
+            textShadow: "2px 2px 0 #0a0a0a, 0 0 20px #ff2bbf",
+            transform: "rotate(2deg)",
+            letterSpacing: "0.04em",
+          }}
+        >
+          Future Minister of Fun & Chill Affairs 😂
+        </p>
+
+        {/* Slogan banner */}
+        <div
+          className="w-full max-w-xl"
+          style={{ transform: "rotate(-1.5deg)" }}
+        >
+          <div
+            className="font-bangers text-center text-2xl md:text-3xl px-6 py-3 tracking-widest"
+            style={{
+              background: "#ff6b00",
+              color: "#ffffff",
+              border: "4px solid #0a0a0a",
+              boxShadow: "5px 5px 0 #0a0a0a",
+              textShadow: "2px 2px 0 #0a0a0a",
+              letterSpacing: "0.06em",
+            }}
+            data-ocid="election_hero.card"
+          >
+            🇮🇳 Sabka Sath, Samir ka Vikas 🍕 🇮🇳
+          </div>
+        </div>
+
+        {/* Image area with badge, speech bubble, and cake */}
+        <div
+          className="relative mt-4"
+          style={{ maxWidth: "300px", width: "100%" }}
+        >
+          {/* Birthday Candidate badge */}
+          <div
+            className="absolute font-bangers text-sm px-3 py-2 animate-sticker-pop z-20"
+            style={{
+              background: "#ff6b00",
+              color: "#ffffff",
+              border: "3px solid #0a0a0a",
+              boxShadow: "3px 3px 0 #0a0a0a",
+              borderRadius: "50% 50% 50% 50% / 40% 40% 60% 60%",
+              transform: "translate(35%, -35%) rotate(15deg)",
+              top: 0,
+              right: 0,
+              lineHeight: "1.2",
+              textAlign: "center",
+              WebkitTextStroke: "0.5px #0a0a0a",
+            }}
+            data-ocid="election_hero.toggle"
+          >
+            Birthday
+            <br />
+            Candidate 🎂
+          </div>
+
+          {/* Speech bubble */}
+          <div
+            className="absolute font-bangers text-sm px-3 py-2 z-20 animate-card-float"
+            style={{
+              background: "#ffffff",
+              color: "#0a0a0a",
+              border: "2.5px solid #0a0a0a",
+              borderRadius: "14px",
+              boxShadow: "2px 2px 0 #0a0a0a",
+              top: "10px",
+              left: "-10px",
+              transform: "translateX(-100%)",
+              whiteSpace: "nowrap",
+              letterSpacing: "0.02em",
+            }}
+          >
+            Aaj cake free hai 😎{/* Triangle pointer */}
+            <span
+              style={{
+                position: "absolute",
+                right: "-12px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                width: 0,
+                height: 0,
+                borderTop: "7px solid transparent",
+                borderBottom: "7px solid transparent",
+                borderLeft: "12px solid #0a0a0a",
+              }}
+            />
+            <span
+              style={{
+                position: "absolute",
+                right: "-9px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                width: 0,
+                height: 0,
+                borderTop: "6px solid transparent",
+                borderBottom: "6px solid transparent",
+                borderLeft: "10px solid #ffffff",
+              }}
+            />
+          </div>
+
+          {/* Samir's image */}
+          <img
+            src="/assets/file_00000000504471fa9b0afb17e141eb1e-019d5b1c-9b55-720d-b73f-4c92db9fddc6.png"
+            alt="Samir - Birthday Candidate"
+            className="w-full block mx-auto animate-hero-img-pulse"
+            style={{
+              maxWidth: "300px",
+              filter: "sepia(0.4) contrast(1.3) brightness(1.1) saturate(1.2)",
+              border: "4px solid #ff6b00",
+              boxShadow:
+                "0 0 0 4px #003300, 8px 8px 0 #0a0a0a, 0 0 40px rgba(255,107,0,0.6)",
+              borderRadius: "4px",
+            }}
+            data-ocid="election_hero.canvas_target"
+          />
+        </div>
+
+        {/* Cake icon below image */}
+        <div
+          className="text-5xl animate-cake-float select-none"
+          style={{ marginTop: "-8px" }}
+          data-ocid="election_hero.panel"
+        >
+          🎂
+        </div>
+      </div>
+
+      {/* Crowd cheer marquee strip */}
+      <div
+        className="w-full overflow-hidden mt-10 py-3"
+        style={{
+          background: "#0a0a0a",
+          borderTop: "3px solid #ff6b00",
+          borderBottom: "3px solid #ff6b00",
+        }}
+        data-ocid="election_hero.row"
+      >
+        <div className="animate-marquee whitespace-nowrap inline-block">
+          <span
+            className="font-bangers text-xl tracking-widest"
+            style={{
+              color: "#ffe600",
+              textShadow: "1px 1px 0 #ff6b00",
+              letterSpacing: "0.08em",
+            }}
+          >
+            📢 SAMIR! SAMIR! SAMIR! 📢 &nbsp;|&nbsp; 🗳️ VOTE KARO SAMIR KO! 🗳️
+            &nbsp;|&nbsp; 🎂 BIRTHDAY CANDIDATE 2025 🎂 &nbsp;|&nbsp; 📢 SAMIR!
+            SAMIR! SAMIR! 📢 &nbsp;|&nbsp; 🎈 SAMIR ZINDABAD! 🎈 &nbsp;|&nbsp;
+            🔥 THE LEGEND THE CANDIDATE THE BIRTHDAY BOY 🔥 &nbsp;|&nbsp;
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // Samir's photo hero section with all effects
 function SamirHeroSection() {
   const [confettiActive, setConfettiActive] = useState(true);
@@ -1447,6 +1714,7 @@ export default function App() {
 
       <div className="relative z-10">
         <AnnouncementStrip />
+        <ElectionHeroSection />
         <SamirHeroSection />
         <RoastSection />
         <AchievementsSection />

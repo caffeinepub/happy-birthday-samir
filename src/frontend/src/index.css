@@ -569,6 +569,27 @@
   animation: float-up-slow ease-out forwards;
 }
 
+/* Cake float animation for ElectionHeroSection */
+@keyframes cake-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-12px) rotate(5deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg) scale(1.05);
+  }
+  75% {
+    transform: translateY(-14px) rotate(4deg) scale(1.08);
+  }
+}
+
+.animate-cake-float {
+  animation: cake-float 2.5s ease-in-out infinite;
+}
+
 .accordion-down {
   animation: accordion-down 0.2s ease-out;
 }
